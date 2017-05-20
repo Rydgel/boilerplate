@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+
+[packages]
+Flask = "*"
+Flask-Common = "*"
+Flask-Admin = "*"
+Flask-Bcrypt = "*"
+Flask-Cache = "*"
+Flask-Celery = "*"
+Flask-Script = "*"
+psycopg2 = "*"
+SQLAlchemy = "*"
+alembic = "*"
+Flask-SQLAlchemy = "*"
+gunicorn = "*"
+requests = "*"
+Flask-Testing = "*"
+Flask-Migrate = "*"
+pytest = "*"
+meinheld = "*"
+Flask-JWT-Extended = "*"
+Flask-Limiter = "*"
+Flask-Sockets = "*"
+ipython = "*"
