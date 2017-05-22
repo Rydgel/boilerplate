@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify
 from app import bcrypt, jwt
-from flask_jwt_extended import jwt_required, jwt_refresh_token_required, \
-    create_access_token, create_refresh_token, get_jwt_identity, get_jwt_claims
+from flask_jwt_extended import jwt_refresh_token_required, \
+    create_access_token, create_refresh_token, get_jwt_identity
 from app.models import User
 
 
@@ -35,7 +35,7 @@ def login():
 
     if user_db is None or not user_db.is_active \
             or not bcrypt.check_password_hash(user_db.password, password):
-        return jsonify(error=True, message='Wrong username or password'), 401
+        return jsonify(error=True, msg='Wrong username or password'), 401
 
     ret = {
         'error': False,
@@ -57,7 +57,7 @@ def fresh_login():
 
     if user_db is None or not user_db.is_active \
             or not bcrypt.check_password_hash(user_db.password, password):
-        return jsonify(error=True, message='Wrong username or password'), 401
+        return jsonify(error=True, msg='Wrong username or password'), 401
 
     ret = {
         'error': False,

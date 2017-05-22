@@ -8,6 +8,6 @@ def email_confirmed(f):
     def wrapper(*args, **kwargs):
         user = get_jwt_claims()
         if not user.confirmed:
-            return jsonify({'error': True, 'msg': 'Email not confirmed'})
+            return jsonify({'error': True, 'msg': 'Email not confirmed'}), 403
         return f(*args, **kwargs)
     return wrapper

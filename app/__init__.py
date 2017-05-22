@@ -36,6 +36,7 @@ def create_app():
     # API endpoints
     from app.api.global_handlers import global_handlers
     global_handlers(app)
+
     from app.api.v1.auth import auth_bp
     app.register_blueprint(auth_bp, url_prefix=r'/v1/auth')
 

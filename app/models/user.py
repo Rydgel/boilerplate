@@ -2,7 +2,6 @@ from .. import db, bcrypt, config
 from itsdangerous import URLSafeTimedSerializer, BadSignature, \
     SignatureExpired
 
-
 user_column = db.Column('user_id', db.Integer(), db.ForeignKey('users.id'))
 role_column = db.Column('role_id', db.Integer(), db.ForeignKey('roles.id'))
 roles_users = db.Table('roles_users', user_column, role_column)
