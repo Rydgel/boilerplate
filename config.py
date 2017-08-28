@@ -13,7 +13,7 @@ class BaseConfig(object):
     SQLALCHEMY_POOL_RECYCLE = 10
     DEBUG = True
     # todo switch that to ENV var
-    SQLALCHEMY_DATABASE_URI = 'postgresql://localhost/vegan'
+    SQLALCHEMY_DATABASE_URI = 'postgresql://localhost/boilerplate'
     # jwt
     JWT_ALGORITHM = 'HS256'
     JWT_ACCESS_TOKEN_EXPIRES = datetime.timedelta(minutes=60)
